@@ -1,0 +1,15 @@
+github   githubuniverse
+github   MailChimp
+github   simurai
+github   GitHubEng
+github   codeconf
+githubuniverse   kelseyschimm
+githubuniverse   copyconstruct
+githubuniverse   AllisonKCraig
+MailChimp   FullFrontalSamB
+MailChimp   atlchamber
+MailChimp   BlackGirlsCode
+MailChimp   wocintechchat
+simurai   elonmusk
+codeconf   AtomEditor
+codeconf   defunkt

@@ -1,0 +1,3 @@
+github   john_stewart
+github   microsoft
+microsoft   oracle

@@ -1,0 +1,3 @@
+/Users/alejandro/Documents/School/ECE275/Project5/azarago3_sna/build/src/CMakeFiles/sna.dir
+/Users/alejandro/Documents/School/ECE275/Project5/azarago3_sna/build/CMakeFiles/ALL_BUILD.dir
+/Users/alejandro/Documents/School/ECE275/Project5/azarago3_sna/build/CMakeFiles/ZERO_CHECK.dir

@@ -1,0 +1,22 @@
+{ "Test_Grade" : {
+ "Test 1" : 0,
+ "Test 2" : 0,
+ "Test 3" : 0,
+ "Test 4" : 0,
+ "Test 5" : 0,
+ "Test 6" : 0,
+ "Test 7" : 0,
+ "Test 8" : 0,
+ "Test 9" : 0,
+ "Test 10" : 0
+, "Empty Test File" : 2
+}
+, "Extra_Credit" : { 
+"1 day early" : 0,
+"2 days early" : 0
+}
+, "Deductions" : { 
+"1 day late" : -10,
+"2 days late" : 0
+}
+}

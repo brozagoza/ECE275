@@ -1,0 +1,3 @@
+
+Usage: ./src/tempfilter inputFile outputFile 
+

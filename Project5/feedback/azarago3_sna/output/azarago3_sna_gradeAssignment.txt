@@ -1,0 +1,490 @@
+----------                    ------------
+----------                    ------------
+----------  Compile and test  ------------
+----------                    ------------
+----------                    ------------
+-- The C compiler identification is GNU 4.4.7
+-- The CXX compiler identification is GNU 4.4.7
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/sprinkjm/ece275/ece275-2015F/grading/grading-project5/121015-0001-01/Project 5 Download Dec 10, 2015 1201 AM/277986/azarago3_sna/build
+Scanning dependencies of target sna
+[ 25%] Building CXX object src/CMakeFiles/sna.dir/graph.cpp.o
+[ 50%] Building CXX object src/CMakeFiles/sna.dir/main.cpp.o
+[ 75%] Building CXX object src/CMakeFiles/sna.dir/user.cpp.o
+[100%] Linking CXX executable sna
+[100%] Built target sna
+Found file ./src/.
+----------                    ------------
+----------                    ------------
+---------- Running your tests ------------
+----------                    ------------
+----------                    ------------
+Assignment name is sna
+Each test will print the time taken after it; if this is greater than
+ or near 30, then it means your code timed out.
+Running test 1 as:
+time timeout 30 nice -10 ./src/sna ../testinputs/input1.txt ../testoutputs/output1.txt
+
+real	0m0.015s
+user	0m0.002s
+sys	0m0.003s
+Running test 2 as:
+time timeout 30 nice -10 ./src/sna ../testinputs/input2.txt ../testoutputs/output2.txt
+
+real	0m0.009s
+user	0m0.002s
+sys	0m0.003s
+Running test 3 as:
+time timeout 30 nice -10 ./src/sna ../testinputs/input3.txt ../testoutputs/output3.txt
+
+real	0m0.019s
+user	0m0.004s
+sys	0m0.000s
+Running test 4 as:
+time timeout 30 nice -10 ./src/sna ../testinputs/input4.txt ../testoutputs/output4.txt
+
+real	0m0.014s
+user	0m0.001s
+sys	0m0.003s
+Running test 5 as:
+time timeout 30 nice -10 ./src/sna ../testinputs/input5.txt ../testoutputs/output5.txt
+
+real	0m0.033s
+user	0m0.002s
+sys	0m0.002s
+Running test 6 as:
+time timeout 30 nice -10 ./src/sna ../testinputs/input6.txt ../testoutputs/output6.txt
+
+real	0m0.026s
+user	0m0.001s
+sys	0m0.003s
+Running test 7 as:
+time timeout 30 nice -10 ./src/sna ../testinputs/input7.txt ../testoutputs/output7.txt
+
+real	0m0.226s
+user	0m0.215s
+sys	0m0.006s
+Running test 8 as:
+time timeout 30 nice -10 ./src/sna ../testinputs/input8.txt ../testoutputs/output8.txt
+
+real	0m2.110s
+user	0m1.910s
+sys	0m0.009s
+Running test 9 as:
+time timeout 30 nice -10 ./src/sna ../testinputs/input9.txt ../testoutputs/output9.txt
+
+real	0m6.714s
+user	0m6.413s
+sys	0m0.017s
+Running test 10 as:
+time timeout 30 nice -10 ./src/sna ../testinputs/input10.txt ../testoutputs/output10.txt
+
+real	0m5.806s
+user	0m5.589s
+sys	0m0.013s
+Running test of empty file...
+
+real	0m0.010s
+user	0m0.002s
+sys	0m0.003s
+Checking for usage...
+
+real	0m0.028s
+user	0m0.003s
+sys	0m0.000s
+----------                    ------------
+----------                    ------------
+---------- Scoring your tests ------------
+----------                    ------------
+----------                    ------------
+scoreTests.sh writing out to GRADESH=../output/grade.sh
+
+ -----------------------
+
+Grading test 1 as:
+diff -bBdw <(head -n 10 ../testoutputs/output1.txt) <(head -n 10 ../outputsCorrect/output1.txt)
+2d1
+< engadget (2)
+4,5d2
+< microsoft (2)
+< john_stewart (1)
+Error. Grade_Test1=0
+
+   (printing first 10 lines of each file, first yours, then the correct one)
+head -n 10 ../testoutputs/output1.txt:
+Looking for new accounts for engadget (2) to follow
+engadget (2)
+github (2)
+microsoft (2)
+john_stewart (1)
+oracle (1)
+head -n 10 ../outputsCorrect/output1.txt:
+Looking for new accounts for engadget (2) to follow
+github (2)
+oracle (1)
+
+ -----------------------
+
+Grading test 2 as:
+diff -bBdw <(head -n 10 ../testoutputs/output2.txt) <(head -n 10 ../outputsCorrect/output2.txt)
+2,9c2
+< AstroBehnken (0)
+< DavaExplorer (0)
+< Gruss_SN (0)
+< Hyperloop (0)
+< IridiumComm (0)
+< SecretaryFoxx (0)
+< TAMUEngineering (0)
+< ThingsWork (0)
+---
+> github (3)
+Error. Grade_Test2=0
+
+   (printing first 10 lines of each file, first yours, then the correct one)
+head -n 10 ../testoutputs/output2.txt:
+Looking for new accounts for SpaceX (8) to follow
+AstroBehnken (0)
+DavaExplorer (0)
+Gruss_SN (0)
+Hyperloop (0)
+IridiumComm (0)
+SecretaryFoxx (0)
+TAMUEngineering (0)
+ThingsWork (0)
+head -n 10 ../outputsCorrect/output2.txt:
+Looking for new accounts for SpaceX (8) to follow
+github (3)
+
+ -----------------------
+
+Grading test 3 as:
+diff -bBdw <(head -n 10 ../testoutputs/output3.txt) <(head -n 10 ../outputsCorrect/output3.txt)
+3,10c3
+< kate_guarente (4)
+< nmsanchez (4)
+< jennifermarsman (3)
+< benogle (0)
+< greg_ip (0)
+< JeffBezos (0)
+< lizclink (0)
+< PyBossa (0)
+---
+> githubuniverse (6)
+Error. Grade_Test3=0
+
+   (printing first 10 lines of each file, first yours, then the correct one)
+head -n 10 ../testoutputs/output3.txt:
+Looking for new accounts for tiffani (7) to follow
+codeconf (6)
+kate_guarente (4)
+nmsanchez (4)
+jennifermarsman (3)
+benogle (0)
+greg_ip (0)
+JeffBezos (0)
+lizclink (0)
+PyBossa (0)
+head -n 10 ../outputsCorrect/output3.txt:
+Looking for new accounts for tiffani (7) to follow
+codeconf (6)
+githubuniverse (6)
+
+ -----------------------
+
+Grading test 4 as:
+diff -bBdw <(head -n 10 ../testoutputs/output4.txt) <(head -n 10 ../outputsCorrect/output4.txt)
+2,7c2
+< minkahunter (1)
+< ChiefElk (0)
+< EmersonBreneman (0)
+< Hello_QW (0)
+< iamchrisscott (0)
+< _omgigi_ (0)
+---
+> github (1)
+Error. Grade_Test4=0
+
+   (printing first 10 lines of each file, first yours, then the correct one)
+head -n 10 ../testoutputs/output4.txt:
+Looking for new accounts for kelseyschimm (5) to follow
+minkahunter (1)
+ChiefElk (0)
+EmersonBreneman (0)
+Hello_QW (0)
+iamchrisscott (0)
+_omgigi_ (0)
+head -n 10 ../outputsCorrect/output4.txt:
+Looking for new accounts for kelseyschimm (5) to follow
+github (1)
+
+ -----------------------
+
+Grading test 5 as:
+diff -bBdw <(head -n 10 ../testoutputs/output5.txt) <(head -n 10 ../outputsCorrect/output5.txt)
+2,4d1
+< LindsaySJvb9 (9)
+< codeconf (8)
+< github (8)
+7,10d3
+< simurai (8)
+< stephbwills (7)
+< AllisonKCraig (0)
+< angularjs (0)
+Error. Grade_Test5=0
+
+   (printing first 10 lines of each file, first yours, then the correct one)
+head -n 10 ../testoutputs/output5.txt:
+Looking for new accounts for LindsaySJvb9 (9) to follow
+LindsaySJvb9 (9)
+codeconf (8)
+github (8)
+githubuniverse (8)
+MailChimp (8)
+simurai (8)
+stephbwills (7)
+AllisonKCraig (0)
+angularjs (0)
+head -n 10 ../outputsCorrect/output5.txt:
+Looking for new accounts for LindsaySJvb9 (9) to follow
+githubuniverse (8)
+MailChimp (8)
+
+ -----------------------
+
+Grading test 6 as:
+diff -bBdw <(head -n 10 ../testoutputs/output6.txt) <(head -n 10 ../outputsCorrect/output6.txt)
+2,8c2
+< bucketsdntlie (0)
+< Greaserat (0)
+< harpdecor (0)
+< iamchrisscott (0)
+< Shelly_Duvall (0)
+< supremegrrrl (0)
+< yehoak (0)
+---
+> githubuniverse (5)
+Error. Grade_Test6=0
+
+   (printing first 10 lines of each file, first yours, then the correct one)
+head -n 10 ../testoutputs/output6.txt:
+Looking for new accounts for minkahunter (7) to follow
+bucketsdntlie (0)
+Greaserat (0)
+harpdecor (0)
+iamchrisscott (0)
+Shelly_Duvall (0)
+supremegrrrl (0)
+yehoak (0)
+head -n 10 ../outputsCorrect/output6.txt:
+Looking for new accounts for minkahunter (7) to follow
+githubuniverse (5)
+
+ -----------------------
+
+Grading test 7 as:
+diff -bBdw <(head -n 10 ../testoutputs/output7.txt) <(head -n 10 ../outputsCorrect/output7.txt)
+2,10c2
+< avitaloliver (0)
+< bitovi (0)
+< Cyrus_ZA (0)
+< elof (0)
+< justinbmeyer (0)
+< kadirahq (0)
+< sama (0)
+< VeryBadHello (0)
+< _katienreed (0)
+---
+> githubuniverse (11)
+Error. Grade_Test7=0
+
+   (printing first 10 lines of each file, first yours, then the correct one)
+head -n 10 ../testoutputs/output7.txt:
+Looking for new accounts for _benstr (11) to follow
+avitaloliver (0)
+bitovi (0)
+Cyrus_ZA (0)
+elof (0)
+justinbmeyer (0)
+kadirahq (0)
+sama (0)
+VeryBadHello (0)
+_katienreed (0)
+head -n 10 ../outputsCorrect/output7.txt:
+Looking for new accounts for _benstr (11) to follow
+githubuniverse (11)
+
+ -----------------------
+
+Grading test 8 as:
+diff -bBdw <(head -n 10 ../testoutputs/output8.txt) <(head -n 10 ../outputsCorrect/output8.txt)
+2,10c2,10
+< Plkyouthstreet (437)
+< SABPP1 (1)
+< SpokMathambo (1)
+< Verified7448 (1)
+< 042naija_Com (0)
+< 10Kmoneydoctor (0)
+< 1DJChoice (0)
+< 20ishSomethings (0)
+< 240x2 (0)
+---
+> COP21 (3)
+> David_Cameron (3)
+> FedericaMog (3)
+> APUkraine (2)
+> CharlesMichel (2)
+> CrisiscenterBE (2)
+> DavenportEUSrb (2)
+> EU_ISS (2)
+> francediplo_EN (2)
+Error. Grade_Test8=0
+
+   (printing first 10 lines of each file, first yours, then the correct one)
+head -n 10 ../testoutputs/output8.txt:
+Looking for new accounts for Plkyouthstreet (437) to follow
+Plkyouthstreet (437)
+SABPP1 (1)
+SpokMathambo (1)
+Verified7448 (1)
+042naija_Com (0)
+10Kmoneydoctor (0)
+1DJChoice (0)
+20ishSomethings (0)
+240x2 (0)
+head -n 10 ../outputsCorrect/output8.txt:
+Looking for new accounts for Plkyouthstreet (437) to follow
+COP21 (3)
+David_Cameron (3)
+FedericaMog (3)
+APUkraine (2)
+CharlesMichel (2)
+CrisiscenterBE (2)
+DavenportEUSrb (2)
+EU_ISS (2)
+francediplo_EN (2)
+
+ -----------------------
+
+Grading test 9 as:
+diff -bBdw <(head -n 10 ../testoutputs/output9.txt) <(head -n 10 ../outputsCorrect/output9.txt)
+2,10c2
+< 1FXCASH (0)
+< 1stInSEO (0)
+< 215javy215 (0)
+< 5mithjeff (0)
+< 6futuristic (0)
+< aakash_singal (0)
+< abaefo (0)
+< aconiton (0)
+< adil_human (0)
+---
+> alexdownie (29)
+Error. Grade_Test9=0
+
+   (printing first 10 lines of each file, first yours, then the correct one)
+head -n 10 ../testoutputs/output9.txt:
+Looking for new accounts for A_Hubbard (570) to follow
+1FXCASH (0)
+1stInSEO (0)
+215javy215 (0)
+5mithjeff (0)
+6futuristic (0)
+aakash_singal (0)
+abaefo (0)
+aconiton (0)
+adil_human (0)
+head -n 10 ../outputsCorrect/output9.txt:
+Looking for new accounts for A_Hubbard (570) to follow
+alexdownie (29)
+
+ -----------------------
+
+Grading test 10 as:
+diff -bBdw <(head -n 10 ../testoutputs/output10.txt) <(head -n 10 ../outputsCorrect/output10.txt)
+2d1
+< ElseMottinQJYI (472)
+10a10
+> eotewb (188)
+Error. Grade_Test10=0
+
+   (printing first 10 lines of each file, first yours, then the correct one)
+head -n 10 ../testoutputs/output10.txt:
+Looking for new accounts for ElseMottinQJYI (472) to follow
+ElseMottinQJYI (472)
+lakemitchells (456)
+RigolEMC (455)
+greeneracres (447)
+scribandotcom (433)
+deg511 (388)
+ralphbenmergui (362)
+BurtonDiaries (338)
+WeNeedDateNight (232)
+head -n 10 ../outputsCorrect/output10.txt:
+Looking for new accounts for ElseMottinQJYI (472) to follow
+lakemitchells (456)
+RigolEMC (455)
+greeneracres (447)
+scribandotcom (433)
+deg511 (388)
+ralphbenmergui (362)
+BurtonDiaries (338)
+WeNeedDateNight (232)
+eotewb (188)
+Grading empty output file from empty input file
+Correct. Grade_Test_Empty=2
+Grading test for usage...
+Grade_Usage=0
+This was your result from usage:
+----------                    ------------
+----------                    ------------
+----------    Test Results    ------------
+----------                    ------------
+----------                    ------------
+Look for your test results in ../output/grade.json
+ which is printed below:
+{ "Test_Grade" : {
+ "Test 1" : 0,
+ "Test 2" : 0,
+ "Test 3" : 0,
+ "Test 4" : 0,
+ "Test 5" : 0,
+ "Test 6" : 0,
+ "Test 7" : 0,
+ "Test 8" : 0,
+ "Test 9" : 0,
+ "Test 10" : 0
+, "Empty Test File" : 2
+}
+The max autograde for the assignment is 32, 
+  which does not include any early submission credit.
+Initialing test grade values:
+Grade_Tests=0
+Here is your grade for all tests:
+Grade_Tests=2
+Grade is 2/32 before applying early/late
+Grade is 0/32 after applying early/late
+----------                    ------------
+----------                    ------------
+----------   Deductions for   ------------
+----------      graders       ------------
+----------                    ------------
+Take the grade you got from the rubric and then:
+** Modify by -10 for Late Submission
+Look above in this file for Grade_Usage
+Look above in this file for any segfault deductions
+** Modify by -10 for Late Submission
+Note: you can (if you want) resubmit for a deduction, up to two days late.
+In that way, you could improve on this grade. Come by office hours to see us.

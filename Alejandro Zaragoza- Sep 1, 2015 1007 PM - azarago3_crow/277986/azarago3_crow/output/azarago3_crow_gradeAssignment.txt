@@ -1,0 +1,156 @@
+Found __MACOSX/ dirs, see Piazza post @10 for how to remove these
+  otherwise, your code won't compile when you try to test it.
+-- The C compiler identification is AppleClang 6.1.0.6020053
+-- The CXX compiler identification is AppleClang 6.1.0.6020053
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc
+-- Check for working C compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
+-- Check for working CXX compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/sprinkle/work/teaching/ece275-2015F/grading/grading-project0/090315-2206/Project0-2205/277986/azarago3_crow/build
+Scanning dependencies of target crow
+[ 33%] Building C object src/CMakeFiles/crow.dir/main.c.o
+[ 66%] Building C object src/CMakeFiles/crow.dir/process.c.o
+[100%] Linking C executable crow
+[100%] Built target crow
+Found file ./src/crow.
+Called with ASSIGNMENTNAME=crow
+Running test 1 as:
+/opt/local/bin/gtimeout 3 nice -10 ./src/crow corn >> outputs/output1.txt 2>&1
+Running test 2 as:
+/opt/local/bin/gtimeout 3 nice -10 ./src/crow Corn >> outputs/output2.txt 2>&1
+Running test 3 as:
+/opt/local/bin/gtimeout 3 nice -10 ./src/crow Snow >> outputs/output3.txt 2>&1
+Running test 4 as:
+/opt/local/bin/gtimeout 3 nice -10 ./src/crow snow >> outputs/output4.txt 2>&1
+Running test 5 as:
+/opt/local/bin/gtimeout 3 nice -10 ./src/crow Corn, said the bird >> outputs/output5.txt 2>&1
+Running test 6 as:
+/opt/local/bin/gtimeout 3 nice -10 ./src/crow Snow is coming >> outputs/output6.txt 2>&1
+Running test 7 as:
+/opt/local/bin/gtimeout 3 nice -10 ./src/crow empty >> outputs/output7.txt 2>&1
+Running test 8 as:
+/opt/local/bin/gtimeout 3 nice -10 ./src/crow Snowsnow >> outputs/output8.txt 2>&1
+Running test 9 as:
+/opt/local/bin/gtimeout 3 nice -10 ./src/crow Checking to see whether more than one input is correctly handled >> outputs/output9.txt 2>&1
+Running test 10 as:
+/opt/local/bin/gtimeout 3 nice -10 ./src/crow What happens with multiple words in a quote >> outputs/output10.txt 2>&1
+Checking for usage...
+Called with GRADESH=/Users/sprinkle/work/teaching/ece275-2015F/grading/grading-project0/090315-2206/Project0-2205/277986/azarago3_crow/output/grade.sh
+Grading test 1 as:
+diff -bBdw outputs/output1.txt outputsCorrect/output1.txt
+Correct. Grade_Test1=10
+Grading test 2 as:
+diff -bBdw outputs/output2.txt outputsCorrect/output2.txt
+1c1
+< "Corn." the bird said, "Corn, Corn."
+---
+> "Corn," the bird said. "Corn, corn."
+Error. Grade_Test2=0
+outputs/output2.txt:
+"Corn." the bird said, "Corn, Corn."
+outputsCorrect/output2.txt:
+"Corn," the bird said. "Corn, corn."
+Grading test 3 as:
+diff -bBdw outputs/output3.txt outputsCorrect/output3.txt
+1c1
+< "Snow." the bird said, "Snow, Snow."
+---
+> "Snow," the bird said. "Snow, snow."
+Error. Grade_Test3=0
+outputs/output3.txt:
+"Snow." the bird said, "Snow, Snow."
+outputsCorrect/output3.txt:
+"Snow," the bird said. "Snow, snow."
+Grading test 4 as:
+diff -bBdw outputs/output4.txt outputsCorrect/output4.txt
+Correct. Grade_Test4=10
+Grading test 5 as:
+diff -bBdw outputs/output5.txt outputsCorrect/output5.txt
+1,4c1
+< Corn,
+< said
+< the
+< bird
+---
+> Corn, said the bird 
+Error. Grade_Test5=0
+outputs/output5.txt:
+Corn,
+said
+the
+bird
+outputsCorrect/output5.txt:
+Corn, said the bird 
+Grading test 6 as:
+diff -bBdw outputs/output6.txt outputsCorrect/output6.txt
+1,3c1
+< Snow
+< is
+< coming
+---
+> Snow is coming 
+Error. Grade_Test6=0
+outputs/output6.txt:
+Snow
+is
+coming
+outputsCorrect/output6.txt:
+Snow is coming 
+Grading test 7 as:
+diff -bBdw outputs/output7.txt outputsCorrect/output7.txt
+Correct. Grade_Test7=10
+Grading test 8 as:
+diff -bBdw outputs/output8.txt outputsCorrect/output8.txt
+Correct. Grade_Test8=10
+Grading test 9 as:
+diff -bBdw outputs/output9.txt outputsCorrect/output9.txt
+1,11c1
+< Checking
+< to
+< see
+< whether
+< more
+< than
+< one
+< input
+< is
+< correctly
+< handled
+---
+> Checking to see whether more than one input is correctly handled 
+Error. Grade_Test9=0
+outputs/output9.txt:
+Checking
+to
+see
+whether
+more
+than
+one
+input
+is
+correctly
+handled
+outputsCorrect/output9.txt:
+Checking to see whether more than one input is correctly handled 
+Grading test for usage...
+Grade_Usage=10
+This was your result from usage:
+This program that echoes a word differently, depending on the word that is passed in. Usage: crow [word]
+	crow [word]
+Grade is 50/100 before applying early/late
+Grade is 70/100 after applying early/late
+Note: you can (if you want) resubmit for a deduction, up to two days late.
+In that way, you could improve on this grade. Come by office hours to see us.
+Note: if all your output files show as empty, you may still be expecting user input through scanf, or a function like scanf.
+Read the assignment carefully, to take input only from the command line, in order to receive points.
